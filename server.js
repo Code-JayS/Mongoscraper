@@ -2,7 +2,6 @@ var bodyParser = require("body-parser")
 var logger = require("morgan");
 var mongoose = require("mongoose");
 
-
 var express = require("express");
 var app = express();
 
@@ -32,9 +31,7 @@ var cheerio = require("cheerio");
 var db = require("./models");
 
 
-var exphb
-// Initialize Express
-var app = express();
+var exphbs = require("express-handlebars")
 
 app.use(express.json());
 
@@ -44,16 +41,14 @@ app.use(express.json());
 // A GET route for scraping the echoJS website
 app.get("/scrape", function(req, res) {
   // First, we grab the body of the html with axios
-  axios.get("https://www.animenewsnetwork.com/").then(function(response) {
+  axios.get("https://www.crunchyroll.com/news").then(function(response) {
     // Then, we load that into cheerio and save it to $ for a shorthand selector
     var $ = cheerio.load(response.data);
 
-    // Now, we grab every h2 within an article tag, and do the following:
-    $(".herald").each(function(i, element) {
+    $("li.news-item h2").each(function(i, element) {
       // Save an empty result object
       var result = {};
 
-      // Add the text and href of every link, and save them as properties of the result object
       result.title = $(this)
         .children("a")
         .text();
