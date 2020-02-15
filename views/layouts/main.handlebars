@@ -1,27 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <!--jQuery Link-->
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+        <!--Bootstrap Links-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Cabin&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" href="/assets/img/icon.png" <title>Anime News</title>
-</head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
-<body>
-    {{>nav/navbar}}
-    <main>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <!--CSS Style Sheet-->
+        <link rel="stylesheet" href="/assets/css/style.css" type="text/css" />
+
+        <title>Mongo Article Scraper!</title>
+    </head>
+    <body>
+    <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
-            {{{ body }}}
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/">Mongo Scraper</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/saved">Saved Articles</a></li>
+                    <li><button type="button" class="btn btn-primary" id="scrape">Scrape Articles</button></li>
+                </ul>
+            </div>
         </div>
-    </main>
-    {{>footer}}
+    </nav>
+    {{{ body }}}
 
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-</body>
-
+        <!--External JS Link-->
+        <script src="/assets/js/app.js"></script>
+    </body>
 </html>

@@ -1,30 +1,21 @@
 {
-  "name": "mongoscraper",
+  "name": "Anime scraper",
   "version": "1.0.0",
-  "description": "news craper",
-  "main": "index.js",
+  "description": "Web app that lets users leave comments on the latest news.",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Code-JayS/Mongoscraper.git"
-  },
-  "author": "",
+  "author": "Jay",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Code-JayS/Mongoscraper/issues"
-  },
-  "homepage": "https://github.com/Code-JayS/Mongoscraper#readme",
   "dependencies": {
-    "axios": "^0.19.1",
-    "body-parser": "^1.19.0",
-    "cheerio": "^1.0.0-rc.3",
-    "express": "^4.17.1",
-    "express-handlebars": "^3.1.0",
-    "mongoose": "^5.8.9",
-    "morgan": "^1.9.1",
-    "path": "^0.12.7",
-    "request": "^2.88.0"
+    "body-parser": "^1.17.2",
+    "cheerio": "^1.0.0-rc.1",
+    "express": "^4.15.3",
+    "express-handlebars": "^3.0.0",
+    "mongoose": "^4.10.6",
+    "morgan": "^1.7.0",
+    "request": "^2.81.0"
   }
 }
