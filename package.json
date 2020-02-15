@@ -1,5 +1,5 @@
 {
-  "name": "Anime scraper",
+  "name": "Mongoscraper",
   "version": "1.0.0",
   "description": "Web app that lets users leave comments on the latest news.",
   "main": "server.js",
